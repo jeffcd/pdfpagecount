@@ -1,8 +1,9 @@
 {
   "name": "pdfpagecount",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Sample to get page count for PDFs and output to csv.",
-  "main": "index.js",
+  "main": "process.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

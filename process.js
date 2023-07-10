@@ -1,5 +1,5 @@
-const pdf = require("pdfjs-dist");
-const fs = require("node:fs");
+import pdf from "pdfjs-dist";
+import fs from "node:fs";
 
 fs.readdir(".", (err, files) => {
   files.forEach((file) => {

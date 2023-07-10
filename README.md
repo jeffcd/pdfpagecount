@@ -2,6 +2,5 @@
 
 - Install node.js
 - cd into the directory
-- Download your pdfs to the directory from s3 (sample in folder already)
-- Open a terminal and run the command:
-  -- node index.js
+- get.js to download files from s3
+- process.js to read files and output csv
