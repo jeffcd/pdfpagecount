@@ -1,10 +1,14 @@
 import fs from "node:fs";
-import { S3Client, GetObjectCommand, ListObjectsCommand } from "@aws-sdk/client-s3";
+import {
+  S3Client,
+  GetObjectCommand,
+  ListObjectsCommand,
+} from "@aws-sdk/client-s3";
 
 const client = new S3Client({});
-const Bucket = "sagemaker-us-west-2-598303512945";
+const Bucket = process.argv[2];
 const listObjectsInput = {
-  Bucket
+  Bucket,
 };
 const command = new ListObjectsCommand(listObjectsInput);
 const response = await client.send(command);

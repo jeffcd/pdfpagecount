@@ -1,4 +1,5 @@
-import pdf from "pdfjs-dist";
+// import pdf from "pdfjs-dist";
+import pdf from "pdfjs-dist/legacy/build/pdf.js";
 import fs from "node:fs";
 
 fs.readdir(".", async (err, files) => {
@@ -9,9 +10,9 @@ fs.readdir(".", async (err, files) => {
       const loadingTask = pdf.getDocument(file);
       await loadingTask.promise.then(function (doc) {
         const numPages = doc.numPages;
-        console.log("# Document Loaded");
-        console.log("Number of Pages: " + numPages);
-        console.log();
+        // console.log("# Document Loaded");
+        // console.log("Number of Pages: " + numPages);
+        // console.log();
         for (let i = 0; i < numPages; i++) {
           console.log(`"${file}",${i}`);
         }
