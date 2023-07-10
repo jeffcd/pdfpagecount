@@ -1,12 +1,13 @@
 import pdf from "pdfjs-dist";
 import fs from "node:fs";
 
-fs.readdir(".", (err, files) => {
-  files.forEach((file) => {
+fs.readdir(".", async (err, files) => {
+  for (let f = 0; f < files.length; f++) {
+    const file = files[f];
     if (/\.pdf$/.test(file)) {
-      const src = fs.readFileSync(file);
+      console.log(file);
       const loadingTask = pdf.getDocument(file);
-      loadingTask.promise.then(function (doc) {
+      await loadingTask.promise.then(function (doc) {
         const numPages = doc.numPages;
         console.log("# Document Loaded");
         console.log("Number of Pages: " + numPages);
@@ -16,7 +17,7 @@ fs.readdir(".", (err, files) => {
         }
       });
     }
-  });
+  }
 });
 
 // "pdfsample.pdf",0
