@@ -16,7 +16,7 @@ fs.readdir(DIR, async (err, files) => {
         // console.log("Number of Pages: " + numPages);
         // console.log();
         for (let i = 0; i < numPages; i++) {
-          console.log(`"${file}",${i}`);
+          console.log(`"${file}",${i + 1}`);
         }
       });
     }
