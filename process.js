@@ -23,5 +23,5 @@ fs.readdir(DIR, async (err, files) => {
   }
 });
 
-// "pdfsample.pdf",0
 // "pdfsample.pdf",1
+// "pdfsample.pdf",2
